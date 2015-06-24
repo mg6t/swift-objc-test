@@ -13,7 +13,7 @@
 -(NSMutableArray *)getScaleList {
     NSMutableArray *scaleList;
     scaleList = [[NSMutableArray alloc] init];
-    for(int i = 0; i < 10; i++) {
+    for(int i = 123; i <= 127; i++) {
         [scaleList addObject:[NSNumber numberWithInteger:i]];
     }
     return scaleList;
