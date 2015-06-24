@@ -13,6 +13,7 @@
 		275232881B3B54640097B49F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 275232871B3B54640097B49F /* Images.xcassets */; };
 		2752328B1B3B54640097B49F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 275232891B3B54640097B49F /* LaunchScreen.xib */; };
 		275232971B3B54650097B49F /* MixAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275232961B3B54650097B49F /* MixAppTests.swift */; };
+		275232A31B3B54C60097B49F /* ObjC.m in Sources */ = {isa = PBXBuildFile; fileRef = 275232A21B3B54C60097B49F /* ObjC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,9 @@
 		275232901B3B54650097B49F /* MixAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MixAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		275232951B3B54650097B49F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		275232961B3B54650097B49F /* MixAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixAppTests.swift; sourceTree = "<group>"; };
+		275232A01B3B54C60097B49F /* MixApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MixApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		275232A11B3B54C60097B49F /* ObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjC.h; sourceTree = "<group>"; };
+		275232A21B3B54C60097B49F /* ObjC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,9 @@
 				275232871B3B54640097B49F /* Images.xcassets */,
 				275232891B3B54640097B49F /* LaunchScreen.xib */,
 				2752327E1B3B54640097B49F /* Supporting Files */,
+				275232A11B3B54C60097B49F /* ObjC.h */,
+				275232A21B3B54C60097B49F /* ObjC.m */,
+				275232A01B3B54C60097B49F /* MixApp-Bridging-Header.h */,
 			);
 			path = MixApp;
 			sourceTree = "<group>";
@@ -214,6 +221,7 @@
 			files = (
 				275232831B3B54640097B49F /* ViewController.swift in Sources */,
 				275232811B3B54640097B49F /* AppDelegate.swift in Sources */,
+				275232A31B3B54C60097B49F /* ObjC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,9 +344,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MixApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MixApp/MixApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -346,9 +357,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MixApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MixApp/MixApp-Bridging-Header.h";
 			};
 			name = Release;
 		};

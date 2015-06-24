@@ -13,6 +13,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        println("viewDidLoad")
+        var objc = ObjC()
+        var list = objc.getScaleList()
+        println("getScaleList:\n\(list)")
     }
 
     override func didReceiveMemoryWarning() {
